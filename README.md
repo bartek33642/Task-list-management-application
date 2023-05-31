@@ -1,5 +1,5 @@
 # Task-list-management-application
-Task list management application
+Task list management application - Angular + NodeJS/ExpressJS web application
 
 ### Technologies used in the project
 - Angular
@@ -19,8 +19,8 @@ cd Task-list-management-application
 cd server
 npm install
 node server.js
-cd ..
 
+(new terminal)
 cd task-list-management
 npm install
 ng serve
