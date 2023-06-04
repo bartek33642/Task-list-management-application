@@ -1,0 +1,25 @@
+<div class="component">
+  <h3>Register form</h3>
+<form class="row g-2">
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input type="email" class="form-control" name="emailid" id="emailid" placeholder="Type email"
+                   value="" [(ngModel)]="credentials.email">
+    </div>    
+    <div class="col-md-6">
+      <label for="inputAddress" class="form-label">Nickname</label>
+      <input type="text" class="form-control" name="mem_name" id="mem_name" placeholder="Type name" value=""
+      [(ngModel)]="credentials.name">
+      
+    </div>
+    <div class="col-12">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input type="password" class="form-control" name="password" id="password"
+                   placeholder="Wpisz hasło (5-15 znaków)" value="" [(ngModel)]="credentials.password">
+    </div>
+
+    <div class="col-12">
+      <button (click)="create()" type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </form>
+</div>
