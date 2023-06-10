@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, importProvidersFrom } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-task-list',
@@ -9,25 +10,43 @@ import { DataService } from 'src/app/services/data.service';
 export class TaskListComponent implements OnInit {
 
   public items$: any;
-
-  // @Input() title?: string;
-  // @Input() important?: boolean;
-  // @Input() text?: string;
-  // @Input() date_end?: Date; 
   // @Input() id?: string;
+  // @Input() title?: string;
+  // @Input() text?: string;
+  // @Input() important?: boolean;
+  // @Input() date_end?: Date;
+
 
   constructor(private service: DataService){
 
   }
 ngOnInit() {
-  
+  this.getAll();
 }
 
-getAll(){
-  this.service.getAll().subscribe(response => {
-    this.items$ = response;
+// getAll(){
+//   this.service.getAll().subscribe(response => {
+   
+//     this.items$ = response; 
+//   });
+// }
+getAll() {
+  this.service.getAll().subscribe(
+    response => {
+      this.items$ = response;
+      console.log(this.items$);
+    },
+    error => {
+      console.log('Błąd podczas pobierania danych:', error);
+    }
+  );
+}
+
+deleteTask(id: string) {
+  this.service.deleteTask(id).subscribe(() => {
+    this.getAll();
+    // window.location.reload(); //Odświeżenie strony
   });
 }
-
 
 }

@@ -19,5 +19,8 @@ export class DataService {
     addTask(data: any){
       return this.http.post(this.url + '/api/task', data);
     }
+    deleteTask(id: string) {
+  return this.http.delete(`${this.url}/api/task/${id}`);
+}
 
 }

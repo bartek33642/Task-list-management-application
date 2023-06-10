@@ -1,7 +1,8 @@
-<p>{{'one-task works!' | textFilter}}</p>
-<h3>Task</h3>
+<div class="view">
+<h5>Task: {{item?.title | textFilter}}</h5>
 
-<!-- <app-task-list [title]="title" [text]="text" [important]="important"></app-task-list>  -->
-<p ></p>
+<p ><b>Text:</b> {{item?.text}}</p>
+<p><b>Due date:</b> {{ item?.date_end | slice:0:10}}</p>
 
-
+<p><b>Is important?</b> {{item?.important ? 'Yes': 'No'}}</p>
+</div>

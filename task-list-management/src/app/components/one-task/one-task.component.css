@@ -1,0 +1,11 @@
+.view{
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 20%;
+    padding: 5%;
+    margin-top : 2%;
+    margin-bottom : 2%;
+}
+h5{
+    text-align: center;
+}

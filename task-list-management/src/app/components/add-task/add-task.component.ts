@@ -15,7 +15,8 @@ export class AddTaskComponent {
     important: false,
     title: '',
     text: '',
-    date_end: new Date()
+    date_end: new Date(),
+    archive: false
 
   };
   constructor(private dataService: DataService, public router: Router) {

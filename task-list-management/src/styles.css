@@ -2,6 +2,6 @@
 
 body{
     background-image: url('/assets/images/main-photo.png');
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-size: cover;
 }

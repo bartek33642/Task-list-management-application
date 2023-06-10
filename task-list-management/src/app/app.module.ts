@@ -31,7 +31,9 @@ import { DataService } from './services/data.service';
     ArchiveComponent,
     OneTaskComponent,
     EditTaskComponent,
-    TextFilterPipe
+    TextFilterPipe,
+    EditTaskComponent,
+    OneTaskComponent
   ],
   imports: [
     BrowserModule,
