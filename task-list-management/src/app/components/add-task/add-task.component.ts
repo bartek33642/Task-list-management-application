@@ -27,6 +27,7 @@ export class AddTaskComponent {
       return result;
     });
     this.router.navigate(['/task-list']);
+
   }
 
 }

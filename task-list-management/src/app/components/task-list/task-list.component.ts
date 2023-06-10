@@ -3,7 +3,7 @@ import { DataService } from 'src/app/services/data.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-task-list',
+  selector: 'task-list',
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.css']
 })
@@ -45,7 +45,6 @@ getAll() {
 deleteTask(id: string) {
   this.service.deleteTask(id).subscribe(() => {
     this.getAll();
-    // window.location.reload(); //Odświeżenie strony
   });
 }
 
