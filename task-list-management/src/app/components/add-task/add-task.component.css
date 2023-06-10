@@ -30,3 +30,9 @@ h3{
     border: none;
     border-radius: 15px;
 }
+input[type=checkbox]{
+    margin-top: 10px;
+    width: 15px;
+    height: 15px;
+    accent-color: #FBF0DF;
+}
