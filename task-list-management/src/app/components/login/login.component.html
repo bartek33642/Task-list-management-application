@@ -1,18 +1,24 @@
 <div class="component">
-    <h3>Login form</h3>
-    <form class="row g-2" action="post" autocomplete="off" method="POST">
-        <div class="row">
-          <label for="inputEmail4" class="form-label">Login</label>
-          <input [(ngModel)]="credentials.login" type="text" class="form-control"
-          name="username" placeholder="Nazwa" title="Login">        
-        </div>
-        <div class="row">
-          <label for="inputPassword4" class="form-label">Password</label>
-          <input [(ngModel)]="credentials.password" type="password" class="form-control"
-          name="password" placeholder="Hasło" title="Password">	
-                </div>
-        <div class="col-12">
-          <button (click)="signIn()" type="submit" class="btn btn-primary">Sign in</button>
-        </div>
-      </form>
+  <h3>Login form</h3>
+  <form class="row g-2" action="post" autocomplete="off" method="POST">
+    <div class="row">
+      <label for="inputEmail4" class="form-label">Login</label>
+      <div class="input-container">
+        <input [(ngModel)]="credentials.login" type="text" class="form-control" name="username" placeholder="Name"
+          title="Login">
+        <button class="clear-button" (click)="clearInput('login')">&times;</button>
+      </div>
     </div>
+    <div class="row">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <div class="input-container">
+        <input [(ngModel)]="credentials.password" type="password" class="form-control" name="password"
+          placeholder="Password" title="Password">
+        <button class="clear-button" (click)="clearInput('password')">&times;</button>
+      </div>
+    </div>
+    <div class="col-12">
+      <button (click)="signIn()" type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </form>
+</div>

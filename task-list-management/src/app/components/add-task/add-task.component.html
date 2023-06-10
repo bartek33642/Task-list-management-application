@@ -1,0 +1,23 @@
+<h3>Add new task</h3>
+<form method="POST" (submit)="addToTask()">
+<div>
+    <h5>Title: </h5>
+    <input type="text" class="input-component" id="title" [(ngModel)]="task.title" name="title" required>
+</div>
+<div>
+    <p style="display: inline-block;">Important?</p>
+    <input type="checkbox" id="important-checkbox" [(ngModel)]="task.important" name="important">
+</div>
+    <div>
+        <h5>Text:</h5> 
+        <textarea class="textarea-component" id="text" [(ngModel)]="task.text" name="text" required>{{ inputValue | textFilter }}</textarea>
+    </div>   
+
+<div>
+    <h5>Date end: </h5>
+    <input type="date" id="date" class="input-date" [(ngModel)]="task.date_end" name="date_end" required>
+</div><br>
+<div class="button-div">
+<button class="button-first">Save &#x276F;</button>
+</div>
+</form>

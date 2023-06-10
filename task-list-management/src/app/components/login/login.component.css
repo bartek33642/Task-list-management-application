@@ -1,7 +1,35 @@
-.component{
-    padding: 20px;
-    
+.component {
+  padding: 20px;
 }
-h3{
-    text-align: center;
+
+h3 {
+  text-align: center;
+}
+
+.input-container {
+  position: relative;
+}
+
+.clear-button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #999;
+}
+
+.show-password-container {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.show-password-label {
+  margin-left: 4px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
 }

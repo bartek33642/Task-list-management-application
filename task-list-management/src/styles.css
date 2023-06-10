@@ -1,8 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-/* .img-home-background{
-   size: cover;
-} */
+
 body{
-    background-image: url('https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-image: url('/assets/images/main-photo.png');
     background-repeat: no-repeat;
+    background-size: cover;
 }

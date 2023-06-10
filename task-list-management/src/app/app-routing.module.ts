@@ -5,6 +5,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { AuthGuard } from './services/auth.guard';
+import { AddTaskComponent } from './components/add-task/add-task.component';
+import { ArchiveComponent } from './components/archive/archive.component';
+import { OneTaskComponent } from './components/one-task/one-task.component';
 
 const routes: Routes = [
   {
@@ -24,6 +27,24 @@ const routes: Routes = [
      {
       path: 'task-list',
       component: TaskListComponent,
+      canActivate: [AuthGuard]
+     },
+
+     {
+      path: 'add-task',
+      component: AddTaskComponent,
+      canActivate: [AuthGuard]
+     },
+
+     {
+      path: 'archive',
+      component: ArchiveComponent,
+      canActivate: [AuthGuard]
+     },
+
+     {
+      path: 'one-task/:id',
+      component: OneTaskComponent,
       canActivate: [AuthGuard]
      }
 

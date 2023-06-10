@@ -1,5 +1,5 @@
+import taskManager from './task.manager';
 import userManager from './user.manager';
-
 
 function getter(manager, request) {
  return function () {
@@ -8,5 +8,6 @@ function getter(manager, request) {
 }
 
 export default {
-   getUserManager: getter(userManager)
+   getUserManager: getter(userManager),
+   getTaskManager: getter(taskManager)
 };

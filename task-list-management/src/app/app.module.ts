@@ -12,6 +12,12 @@ import { TaskListComponent } from './components/task-list/task-list.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import {AuthInterceptor} from './services/auth/auth.interceptor';
 import { FormsModule } from '@angular/forms';
+import { AddTaskComponent } from './components/add-task/add-task.component';
+import { ArchiveComponent } from './components/archive/archive.component';
+import { OneTaskComponent } from './components/one-task/one-task.component';
+import { EditTaskComponent } from './components/edit-task/edit-task.component';
+import { TextFilterPipe } from './pipes/text-filter.pipe';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +26,12 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     HomeComponent,
     LoginComponent,
-    TaskListComponent
+    TaskListComponent,
+    AddTaskComponent,
+    ArchiveComponent,
+    OneTaskComponent,
+    EditTaskComponent,
+    TextFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -30,6 +41,7 @@ import { FormsModule } from '@angular/forms';
   ],
   providers: [
     AuthService,
+    DataService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,

@@ -13,6 +13,8 @@ export class LoginComponent implements OnInit {
 	login: '',
 	password: ''
   };
+  public showPassword: boolean = false;
+  public passwordFieldType: string = 'password';
 
   public logged?: boolean;
   public logout?: boolean;
@@ -39,5 +41,11 @@ export class LoginComponent implements OnInit {
 	});
   }
 
+  
+  clearInput(fieldId: keyof typeof LoginComponent.prototype.credentials) {
+    this.credentials[fieldId] = '';
+  }
+
+  
 }
 
