@@ -1,13 +1,3 @@
-// import { Directive } from '@angular/core';
-
-// @Directive({
-//   selector: '[appBackgroundImportant]'
-// })
-// export class BackgroundImportantDirective {
-
-//   constructor() { }
-
-// }
 import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
 
 @Directive({
