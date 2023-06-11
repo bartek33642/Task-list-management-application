@@ -15,7 +15,7 @@
 
 <div>
     <h5>Date end: </h5>
-    <input type="date" id="date" class="input-date" [(ngModel)]="task.date_end" name="date_end" required>
+    <input type="date" id="date" class="input-date" pattern="yyyy-mm-dd" [(ngModel)]="task.date_end" name="date_end" required>
 </div><br>
 <div class="button-div">
 <button class="button-first">Save &#x276F;</button>

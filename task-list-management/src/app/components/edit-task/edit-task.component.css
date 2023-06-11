@@ -1,0 +1,38 @@
+p, h3, h5, .textarea-composnent, .input-component, textarea, input{
+    margin-left: 5%;
+}
+
+h3{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.textarea-component, .input-component{
+    width: 80%;
+}
+.input-date{
+    margin-bottom: 2%;
+    width: 80%;
+}
+.button-div{
+    text-align: center;
+}
+.button-first{
+    border-radius: 20px;
+    border: none;
+    background-color: #FBF0DF;
+    width: 40%;
+    font-size: 18px;
+    margin-bottom: 5%;
+}
+.input-component, #important-checkbox, .textarea-component, .input-date{
+    background-color: #FBF0DF ;
+    border: none;
+    border-radius: 15px;
+}
+input[type=checkbox]{
+    margin-top: 10px;
+    width: 15px;
+    height: 15px;
+    accent-color: #FBF0DF;
+}

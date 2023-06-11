@@ -1,1 +1,53 @@
-<p>edit-task works!</p>
+<!-- <h3>Edit Task</h3>
+
+<form (ngSubmit)="updateTask()">
+  <div *ngIf="task">
+    <h5>Title:</h5>
+    <input type="text" class="input-component" id="title" name="title" [(ngModel)]="task.title" required>
+  </div>
+  <div>
+    <p style="display: inline-block;">Important:</p>
+    <input type="checkbox" name="important" [(ngModel)]="task.important">
+  </div>
+  <div>
+    <h5>Text:</h5>
+    <textarea name="text" class="textarea-component" id="text" [(ngModel)]="task.text"></textarea>
+  </div>
+
+  <div>
+    <h5>Due Date:</h5>
+    <input type="date" name="date_end" id="date" class="input-date" pattern="yyyy-mm-dd"[(ngModel)]="task.date_end">
+  </div>
+
+<div class="button-div">
+ <button class="button-first">Update Task</button>
+</div>
+ 
+</form> -->
+
+<h3>Edit Task</h3>
+
+<form *ngIf="task" (ngSubmit)="updateTask()">
+  <div>
+    <h5>Title:</h5>
+    <input type="text" class="input-component" id="title" name="title" [(ngModel)]="task.title" required>
+  </div>
+  <div>
+    <p style="display: inline-block;">Important:</p>
+    <input type="checkbox" name="important" [(ngModel)]="task.important">
+  </div>
+  <div>
+    <h5>Text:</h5>
+    <textarea name="text" class="textarea-component" id="text" [(ngModel)]="task.text"></textarea>
+  </div>
+
+  <div>
+    <h5>Due Date:</h5>
+    <input type="date" name="date_end" id="date" class="input-date" pattern="yyyy-mm-dd" [(ngModel)]="task.date_end">
+  </div>
+
+  <div class="button-div">
+    <button class="button-first">Update Task</button>
+  </div>
+</form>
+

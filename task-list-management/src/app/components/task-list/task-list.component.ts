@@ -103,4 +103,17 @@ export class TaskListComponent implements OnInit {
       this.getAll();
     });
   }
+  
+  getTaskById(id: string) {
+    this.service.getById(id).subscribe(
+      (response: Object) => {
+        const task = response as any;
+        // Tutaj można przekazać pobrane dane do komponentu edycji
+      },
+      (error: any) => {
+        console.log('Błąd podczas pobierania danych:', error);
+      }
+    );
+  }
+
 }
