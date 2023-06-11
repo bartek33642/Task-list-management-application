@@ -18,6 +18,7 @@ import { OneTaskComponent } from './components/one-task/one-task.component';
 import { EditTaskComponent } from './components/edit-task/edit-task.component';
 import { TextFilterPipe } from './pipes/text-filter.pipe';
 import { DataService } from './services/data.service';
+import { BackgroundImportantDirective } from './directives/background-important.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { DataService } from './services/data.service';
     EditTaskComponent,
     TextFilterPipe,
     EditTaskComponent,
-    OneTaskComponent
+    OneTaskComponent,
+    BackgroundImportantDirective
   ],
   imports: [
     BrowserModule,

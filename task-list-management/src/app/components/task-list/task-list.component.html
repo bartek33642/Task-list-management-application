@@ -5,7 +5,7 @@
   </button>
 </div>
 
-<div class="task-list-border" *ngFor="let item of items$">
+<div class="task-list-border" *ngFor="let item of items$" [appBackgroundImportant]="item.important">
   <img src="/assets/images/exclamation.png" class="" *ngIf="item.important">
   <p><b>{{ item.title }}</b></p>
   <p>Due date: {{ item.date_end | slice:0:10}}</p>
