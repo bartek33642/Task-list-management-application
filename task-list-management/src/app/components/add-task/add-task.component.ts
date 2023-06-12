@@ -22,12 +22,18 @@ export class AddTaskComponent {
   constructor(private dataService: DataService, public router: Router) {
   }
 
+  // addToTask() {
+  //   this.dataService.addTask(this.task).subscribe((result) => {
+  //     return result;
+  //   });
+  //   this.router.navigate(['/task-list']);
+  //   location.reload();
+  // }
   addToTask() {
-    this.dataService.addTask(this.task).subscribe((result) => {
-      return result;
+    this.dataService.addTask(this.task).subscribe(() => {
+      this.router.navigate(['/task-list']).then(() => {
+        location.reload(); 
+      });
     });
-    this.router.navigate(['/task-list']);
-
   }
-
 }
