@@ -13,7 +13,6 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import {AuthInterceptor} from './services/auth/auth.interceptor';
 import { FormsModule } from '@angular/forms';
 import { AddTaskComponent } from './components/add-task/add-task.component';
-import { ArchiveComponent } from './components/archive/archive.component';
 import { OneTaskComponent } from './components/one-task/one-task.component';
 import { EditTaskComponent } from './components/edit-task/edit-task.component';
 import { TextFilterPipe } from './pipes/text-filter.pipe';
@@ -29,7 +28,6 @@ import { BackgroundImportantDirective } from './directives/background-important.
     LoginComponent,
     TaskListComponent,
     AddTaskComponent,
-    ArchiveComponent,
     OneTaskComponent,
     EditTaskComponent,
     TextFilterPipe,

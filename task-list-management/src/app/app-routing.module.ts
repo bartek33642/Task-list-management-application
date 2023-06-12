@@ -6,7 +6,6 @@ import { LoginComponent } from './components/login/login.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { AuthGuard } from './services/auth.guard';
 import { AddTaskComponent } from './components/add-task/add-task.component';
-import { ArchiveComponent } from './components/archive/archive.component';
 import { OneTaskComponent } from './components/one-task/one-task.component';
 import { EditTaskComponent } from './components/edit-task/edit-task.component';
 
@@ -38,12 +37,6 @@ const routes: Routes = [
      },
 
      {
-      path: 'archive',
-      component: ArchiveComponent,
-      canActivate: [AuthGuard]
-     },
-
-     {
       path: 'one-task/:id',
       component: OneTaskComponent,
       canActivate: [AuthGuard]
@@ -52,7 +45,7 @@ const routes: Routes = [
       path: 'edit-task/:id',
       component: EditTaskComponent,
       canActivate: [AuthGuard]
-     }
+     },
 
 ];
 
