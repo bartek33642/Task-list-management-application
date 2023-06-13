@@ -13,13 +13,16 @@ A project created for the "Web Application Technologies" class. The web applicat
 The user to the application can log in / register. After correct login, the user will be able to add and delete tasks. 
 
 ### How to start web application
+##### Server
 ```
 git clone https://github.com/bartek33642/Task-list-management-application.git
 cd Task-list-management-application
 cd server
 npm install
 node server.js
-
+```
+##### Frontend
+```
 (new terminal)
 cd task-list-management
 npm install
