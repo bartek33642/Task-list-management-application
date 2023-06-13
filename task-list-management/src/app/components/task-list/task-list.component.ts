@@ -1,58 +1,6 @@
-// import { Component, OnInit, Input, importProvidersFrom } from '@angular/core';
-// import { DataService } from 'src/app/services/data.service';
-// import { ActivatedRoute } from '@angular/router';
-
-// @Component({
-//   selector: 'task-list',
-//   templateUrl: './task-list.component.html',
-//   styleUrls: ['./task-list.component.css']
-// })
-// export class TaskListComponent implements OnInit {
-
-//   public items$: any;
-//   // @Input() id?: string;
-//   // @Input() title?: string;
-//   // @Input() text?: string;
-//   // @Input() important?: boolean;
-//   // @Input() date_end?: Date;
-
-
-//   constructor(private service: DataService){
-
-//   }
-// ngOnInit() {
-//   this.getAll();
-// }
-
-// // getAll(){
-// //   this.service.getAll().subscribe(response => {
-   
-// //     this.items$ = response; 
-// //   });
-// // }
-// getAll() {
-//   this.service.getAll().subscribe(
-//     response => {
-//       this.items$ = response;
-//       console.log(this.items$);
-//     },
-//     error => {
-//       console.log('Błąd podczas pobierania danych:', error);
-//     }
-//   );
-// }
-
-// deleteTask(id: string) {
-//   this.service.deleteTask(id).subscribe(() => {
-//     this.getAll();
-//   });
-// }
-
-// }
-
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
-import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'task-list',
@@ -62,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class TaskListComponent implements OnInit {
   public items$: any[] = [];
 
-  constructor(private service: DataService) {}
+  constructor(private service: DataService, private location: Location) {}
 
   ngOnInit() {
     this.getAll();
@@ -83,14 +31,14 @@ export class TaskListComponent implements OnInit {
 
   sortTasks() {
     this.items$.sort((a, b) => {
-      // Sortowanie po atrybucie 'important' (true na górze)
+      // Sortowanie po atrybucie 'important'
       if (a.important && !b.important) {
         return -1;
       } else if (!a.important && b.important) {
         return 1;
       }
 
-      // Sortowanie po atrybucie 'date_end' (od najwcześniejszej do najpóźniejszej)
+      // Sortowanie po atrybucie 'date_end' 
       const dateA = new Date(a.date_end);
       const dateB = new Date(b.date_end);
 
@@ -98,17 +46,24 @@ export class TaskListComponent implements OnInit {
     });
   }
 
-  deleteTask(id: string) {
-    this.service.deleteTask(id).subscribe(() => {
-      this.getAll();
-    });
+
+  deleteTask(id: string): void {
+    const confirmDelete = window.confirm('Do you want to delete this task?');
+    if (confirmDelete) {
+      this.service.deleteTask(id).subscribe(() => {
+        this.getAll();
+      }, () => {
+        window.location.reload();
+      });
+    }
   }
+
+  
   
   getTaskById(id: string) {
     this.service.getById(id).subscribe(
       (response: Object) => {
         const task = response as any;
-        // Tutaj można przekazać pobrane dane do komponentu edycji
       },
       (error: any) => {
         console.log('Błąd podczas pobierania danych:', error);

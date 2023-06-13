@@ -1,21 +1,3 @@
-// import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
-
-// @Directive({
-//   selector: '[appBackgroundImportant]'
-// })
-// export class BackgroundImportantDirective implements OnChanges {
-//   @Input('appBackgroundImportant') important!: boolean;
-
-//   constructor(private elementRef: ElementRef) {}
-
-//   ngOnChanges() {
-//     if (this.important) {
-//       this.elementRef.nativeElement.style.backgroundColor = '#FFAD89';
-//     } else {
-//       this.elementRef.nativeElement.style.backgroundColor = '';
-//     }
-//   }
-// }
 import { Directive, ElementRef, Input, OnChanges, Host, Inject, Optional } from '@angular/core';
 import { TaskListComponent } from '../components/task-list/task-list.component';
 

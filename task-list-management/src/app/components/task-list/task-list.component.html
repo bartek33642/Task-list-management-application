@@ -10,6 +10,6 @@
   <p><b>{{ item?.title }}</b></p>
   <p>Due date: {{ item.date_end | slice:0:10}}</p>
   <button class="button-type" [routerLink]="['/edit-task', item?.id]"><img src="/assets/images/edit.png" class="" ></button>
-  <button class="button-type" (click)="deleteTask(item?.id)" onclick="window.location.reload();"><img src="/assets/images/trash.png" class=""></button>
+  <button class="button-type" (click)="deleteTask(item?.id)" ><img src="/assets/images/trash.png" class=""></button>
   <button class="button-type" [routerLink]="['/one-task', item?.id]"><img src="/assets/images/right.png" class="" ></button>
 </div>
