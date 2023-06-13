@@ -19,7 +19,7 @@ git clone https://github.com/bartek33642/Task-list-management-application.git
 cd Task-list-management-application
 cd server
 npm install
-node server.js
+node index.js
 ```
 ##### Frontend
 ```
