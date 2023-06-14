@@ -1,4 +1,4 @@
-.header{
+/* .header{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,4 +7,48 @@
 }
 h2{
     text-align: center;
-}
+} */
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header {
+    text-align: center;
+    color: #000;
+  }
+  
+  .description {
+    text-align: center;
+    font-size: 18px;
+    color: #000;
+  }
+  
+  .link {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .footer {
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+  }
+  
